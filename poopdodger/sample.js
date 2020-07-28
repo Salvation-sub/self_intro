@@ -13,6 +13,8 @@ var paddleWidth = 30;
 var paddleX = (canvas.width - paddleWidth) / 2;
 var rightPressed = false;
 var leftPressed = false;
+var poop_img = document.getElementById("img/poop.png");
+var poop_pat = ctx.createPattern(poop_img, "no-repeat");
 
 /*var poop = new Image();
 poop.src = "img/poop.png";
@@ -25,7 +27,7 @@ function drawpoop(list) {
     for (var i = 0; i < list.length; i++) {
         ctx.beginPath();
         ctx.arc(list[i].x, list[i].y, ballRadius, 0, Math.PI * 2);
-        ctx.fillStyle = "red";
+        ctx.fillStyle = poop_pat;
         ctx.fill();
         ctx.closePath();
     }
